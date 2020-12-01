@@ -1,4 +1,4 @@
-﻿namespace D01
+﻿namespace aoc.D01
 {
 	public static class Helper
 	{
