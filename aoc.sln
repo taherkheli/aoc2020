@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1B94B78D-0
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Driver", "Driver\Driver.csproj", "{69D5F5CF-1656-48DD-B394-4469C15AA14D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aoc.test", "test\aoc.test\aoc.test.csproj", "{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aoc.test", "test\aoc.test.csproj", "{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
