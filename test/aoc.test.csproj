@@ -14,11 +14,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\aoc.csproj" />
+    <ProjectReference Include="..\src\aoc.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="D01\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="D02\input.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
