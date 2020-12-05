@@ -9,9 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5D506AF3-154
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1B94B78D-0C94-4CAE-BD58-573C4EC104DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Driver", "Driver\Driver.csproj", "{69D5F5CF-1656-48DD-B394-4469C15AA14D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aoc.test", "test\aoc.test.csproj", "{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aoc.test", "test\aoc.test.csproj", "{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{82BA1FF1-1300-4F06-8735-AEFC89D58552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82BA1FF1-1300-4F06-8735-AEFC89D58552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82BA1FF1-1300-4F06-8735-AEFC89D58552}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69D5F5CF-1656-48DD-B394-4469C15AA14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69D5F5CF-1656-48DD-B394-4469C15AA14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69D5F5CF-1656-48DD-B394-4469C15AA14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69D5F5CF-1656-48DD-B394-4469C15AA14D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBD34926-D5F2-41AC-99B7-1B8BB79888FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
