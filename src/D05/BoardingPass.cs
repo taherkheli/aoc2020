@@ -52,10 +52,10 @@ namespace aoc.D05
 
 	  private int GetSeatID(string s)
 		{
-			var s_row = s.Substring(0, 7);
-			var s_column = s.Substring(7);
+			var string_row = s.Substring(0, 7);
+			var string_column = s.Substring(7);
 
-			return 8 * GetRow(s_row) + GetColumn(s_column);
+			return 8 * GetRow(string_row) + GetColumn(string_column);
 		}
 
 		private int GetColumn(string s)
@@ -71,42 +71,40 @@ namespace aoc.D05
 		private int Locate(string s)
 		{
 			var iterations = s.Length;
-			var range = new int[] { 0, (int)Math.Pow(2, iterations) - 1 };  //starting point
+			var range = Tuple.Create( 0, (int)Math.Pow(2, iterations) - 1 );  //starting point
 
-			for (int i = 0; i < iterations; i++)
-			{
-				range = UpdateRange(s[i], range);
-			}
+			foreach (var c in s)
+				range = UpdateRange(c, range);
 
-			return range[0];
+			return range.Item1;
 		}
 
-		private int[] UpdateRange(char c, int[] range)
+		private Tuple<int, int> UpdateRange(char c, Tuple<int, int> range)
 		{
-			var result = new int[2] { -1, -1 };
+			var result = Tuple.Create(-1,-1);
+			int lb = range.Item1;
+			int ub = range.Item2;
 
-			if ((range[1] - range[0]) == 1) //final iteration
+			if ((ub - lb) == 1) //final iteration
 			{
 				if ((c == 'R') || (c == 'B'))
 				{
-					result[0] = result[1] = range[1];
+					result = Tuple.Create(ub, ub);
 				}
 				else if ((c == 'L') || (c == 'F'))
 				{
-					result[0] = result[1] = range[0];
+					result = Tuple.Create(lb, lb);
 				}
 			}
 			else
 			{
 				if ((c == 'R') || (c == 'B'))
 				{
-					result[0] = range[0] + ((range[1] - range[0]) + 1) / 2;
-					result[1] = range[1];
+					result = Tuple.Create(lb + ((ub - lb) + 1) / 2, ub);
 				}
 				else if ((c == 'L') || (c == 'F'))
 				{
-					result[0] = range[0];
-					result[1] = range[0] + ((((range[1] - range[0]) + 1) / 2) - 1);
+					result = Tuple.Create(lb, lb + ((((ub - lb) + 1) / 2) - 1));
 				}
 			}
 
