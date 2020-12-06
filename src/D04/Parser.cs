@@ -1,4 +1,4 @@
-﻿using System;
+﻿using aoc.Shared;
 using System.Collections.Generic;
 using System.IO;
 
@@ -27,32 +27,12 @@ namespace aoc.D04
 		public static List<Passport> Parse(string path)
 		{
 			var lines = File.ReadAllLines(path);
-			var chunk = new List<string>();
-			var chunks = new List<List<string>>();
 			var result = new List<Passport>();
+			var chunks = Lib.GetEmptyLineSeparatedChunks(lines);
 
-			for (int i = 0; i < lines.Length; i++)
-			{
-				if (lines[i] == String.Empty)
-				{
-					chunks.Add(chunk);
-					chunk = new List<string>();
-				}
-				else
-				{
-					chunk.Add(lines[i]);
+			foreach (var chunk in chunks)
+				result.Add(new Passport(ExtractFields(chunk.ToArray())));
 
-					if (i == lines.Length - 1)
-					{
-						chunks.Add(chunk);
-						chunk = null;
-					}
-				}
-			}
-
-			foreach (var piece in chunks)
-				result.Add(new Passport(ExtractFields(piece.ToArray())));		
-			
 			return result;
 		}
 	}
