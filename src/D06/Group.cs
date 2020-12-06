@@ -9,10 +9,10 @@ namespace aoc.D06
 		public Group(string[] lines)
 		{
 			foreach (var line in lines)
-				_responses.Add(new HashSet<char>(line.ToCharArray()));
+				_responses.Add(new HashSet<char>(line));
 		}
 
-		public static int GetAnyoneAnsweredYesCount(List<Group> groups)
+		public static int GetAnyoneAnsweredYesCount(IEnumerable<Group> groups)
 		{
 			int sum = 0;
 
@@ -22,7 +22,7 @@ namespace aoc.D06
 			return sum;
 		}
 
-		public static int GetEveryoneAnsweredYesCount(List<Group> groups)
+		public static int GetEveryoneAnsweredYesCount(IEnumerable<Group> groups)
 		{
 			int sum = 0;
 
