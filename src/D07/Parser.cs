@@ -27,7 +27,7 @@ namespace aoc.D07
 
 						var num = int.Parse(subStrings2[0].ToString());
 						var color = (subStrings2[1] + " " + subStrings2[2]);
-						bag.Table.Add(color, num);
+						bag.Data.Add(color, num);
 					}
 				}
 
