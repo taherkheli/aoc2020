@@ -6,6 +6,8 @@ namespace aoc.test.D01
 	[TestClass]
 	public class TC01
 	{
+		int[] input = Parser.Parse("./D01/input.txt");
+
 		[TestMethod]
 		public void Initial()
 		{
@@ -28,7 +30,6 @@ namespace aoc.test.D01
 		public void PartI()
 		{
 			var expected = 158916;
-			var input = Parser.Parse("./D01/input.txt");
 
 			var actual = Helper.Sum2(input);
 
@@ -39,7 +40,6 @@ namespace aoc.test.D01
 		public void PartII()
 		{
 			var expected = 165795564;
-			var input = Parser.Parse("./D01/input.txt");
 
 			var actual = Helper.Sum3(input);
 

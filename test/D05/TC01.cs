@@ -9,22 +9,15 @@ namespace aoc.test.D05
 		BoardingPass[] passes = Parser.Parse("./D05/input.txt");
 
 		[TestMethod]
-		public void InitialI()
+		[DataRow("FBFBBFFRLR", 357)]
+		[DataRow("BFFFBBFRRR", 567)]
+		[DataRow("FFFBBBFRRR", 119)]
+		[DataRow("BBFFBBFRLL", 820)]
+		public void Initial(string code, int expected)
 		{
-			var expected1 = 357;
-			var expected2 = 567;
-			var expected3 = 119;
-			var expected4 = 820;
+			var actual = new BoardingPass(code).SeatID;
 
-			var actual1 = new BoardingPass("FBFBBFFRLR").SeatID;
-			var actual2 = new BoardingPass("BFFFBBFRRR").SeatID;
-			var actual3 = new BoardingPass("FFFBBBFRRR").SeatID;
-			var actual4 = new BoardingPass("BBFFBBFRLL").SeatID;
-
-			Assert.AreEqual(expected1, actual1);
-			Assert.AreEqual(expected2, actual2);
-			Assert.AreEqual(expected3, actual3);
-			Assert.AreEqual(expected4, actual4);
+			Assert.AreEqual(expected, actual);
 		}
 
 		[TestMethod]
