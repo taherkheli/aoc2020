@@ -25,7 +25,7 @@ namespace aoc.test.D07
 		[TestMethod]
 		[DataRow("./D07/ex1.txt", 32)]
 		[DataRow("./D07/ex2.txt", 126)]
-		[DataRow("./D07/Input.txt", 9569)]
+		[DataRow("./D07/input.txt", 9569)]
 		public void PartII(string path, int expected)
 		{
 			List<Bag> bags = Parser.Parse(path);
