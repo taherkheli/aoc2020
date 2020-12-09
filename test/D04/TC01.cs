@@ -7,11 +7,11 @@ namespace aoc.test.D04
 	public class TC01
 	{
 		[TestMethod]
-		public void InitialI()
+		[DataRow("./D04/ex1.txt", 2)]
+		[DataRow("./D04/input.txt", 170)]
+		public void PartI(string path, int expected)
 		{
-			var expected = 2;
-
-			var passports = Parser.Parse("./D04/ex1.txt");
+			var passports = Parser.Parse(path);
 			int count = 0;
 
 			foreach (var p in passports)
@@ -24,45 +24,11 @@ namespace aoc.test.D04
 		}
 
 		[TestMethod]
-		public void PartI()
+		[DataRow("./D04/ex2.txt", 4)]
+		[DataRow("./D04/input.txt", 103)]
+		public void PartII(string path, int expected)
 		{
-			var expected = 170;
-
-			var passports = Parser.Parse("./D04/input.txt");
-			int count = 0;
-
-			foreach (var p in passports)
-				if (p.ValidatePartI())
-					count++;
-
-			var actual = count;
-
-			Assert.AreEqual(expected, actual);
-		}
-
-		[TestMethod]
-		public void InitialII()
-		{
-			var expected = 4;
-
-			var passports = Parser.Parse("./D04/ex2.txt");
-			int count = 0;
-
-			foreach (var p in passports)
-				if (p.ValidatePartII())
-					count++;
-
-			var actual = count;
-
-			Assert.AreEqual(expected, actual);
-		}
-
-		[TestMethod]
-		public void PartII()
-		{
-			var expected = 103;
-
-			var passports = Parser.Parse("./D04/input.txt");
+			var passports = Parser.Parse(path);
 			int count = 0;
 
 			foreach (var p in passports)
