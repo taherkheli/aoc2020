@@ -80,6 +80,12 @@
 	</None>
 	<None Update="D12\input.txt">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	<None Update="D24\ex.txt">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	<None Update="D24\input.txt">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	</None>	
   </ItemGroup>
 
