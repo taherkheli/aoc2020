@@ -19,5 +19,17 @@ namespace aoc.test.D14
       Assert.AreEqual(expected, actual);
     }
 
+    [TestMethod]
+    [DataRow("./D14/ex2.txt", 208)]
+    [DataRow("./D14/input.txt", 4401465949086)]
+    public void PartII(string path, long expected)
+    {
+      var list = Parser.Parse(path);
+      var memory = new Emulator();
+
+      var actual = memory.PartII(list);
+
+      Assert.AreEqual(expected, actual);
+    }
   }
 }
